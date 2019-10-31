@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "DataProvide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependenceProperty", "DependenceProperty\DependenceProperty.csproj", "{271C871F-9A44-4540-8E11-755609D3644D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventGO", "EventGO\EventGO.csproj", "{72539703-8566-4896-A8B1-D473D4059AEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{271C871F-9A44-4540-8E11-755609D3644D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{271C871F-9A44-4540-8E11-755609D3644D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{271C871F-9A44-4540-8E11-755609D3644D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72539703-8566-4896-A8B1-D473D4059AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72539703-8566-4896-A8B1-D473D4059AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72539703-8566-4896-A8B1-D473D4059AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72539703-8566-4896-A8B1-D473D4059AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
