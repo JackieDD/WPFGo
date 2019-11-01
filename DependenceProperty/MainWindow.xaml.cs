@@ -46,6 +46,10 @@ namespace DependenceProperty
             
         }
     }
+
+
+
+
     public class Student : DependencyObject
     {
         public static readonly DependencyProperty NameProperty = DependencyProperty.Register("Name", typeof(string), typeof(Student));
@@ -79,5 +83,7 @@ namespace DependenceProperty
     {
 
     }
+
+
 
 }

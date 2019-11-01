@@ -1,0 +1,15 @@
+﻿<Window x:Class="CommandGo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommandGo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="175" Width="260" Background="LightBlue">
+    <Grid>
+        <StackPanel Name="stackPanel">
+            <Button Name="button1" Content="Send Command" Margin="5" />
+            <TextBox Name="textBoxA" Margin="5,0" Height="100"/>
+        </StackPanel>
+    </Grid>
+</Window>

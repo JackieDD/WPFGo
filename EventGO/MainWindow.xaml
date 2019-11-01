@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventGO"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <local:TimeButton Content="点我"/>
+        Title="MainWindow" Height="200" Width="250">
+    <Grid Name="g1" local:TimeButton.ReportTime="ReportTimeHandler">
+        <Grid Name="g2" local:TimeButton.ReportTime="ReportTimeHandler">
+            <Grid Name="g3" local:TimeButton.ReportTime="ReportTimeHandler">
+                <Grid Name="g4" local:TimeButton.ReportTime="ReportTimeHandler">
+                    <StackPanel>
+                        <local:TimeButton Content="绑定事件" x:Name="btn1" Margin="40" local:TimeButton.ReportTime="ReportTimeHandler"/>
+                        <Button Content="附加事件" x:Name="btn2" Margin="40,0" Click="btn2_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        
     </Grid>
 </Window>

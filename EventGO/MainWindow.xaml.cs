@@ -18,11 +18,34 @@ namespace EventGO
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
+    
+
+
+
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            g1.AddHandler(Student.NameChangedEvent, new RoutedEventHandler(StudentNameChangedHandler));
+        }
+
+
+        public void ReportTimeHandler(object sender, ReportTimeEventArgs e)
+        {
+            MessageBox.Show((sender as FrameworkElement).Name + "  " + e.ClickTime.ToString());
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Student student = new Student() { ID = 1, Name = "磊哥" };
+            btn2.RaiseEvent(new RoutedEventArgs(Student.NameChangedEvent,student));
+        }
+
+        private void StudentNameChangedHandler(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show((e.OriginalSource as Student).ID.ToString());
         }
     }
 
@@ -33,7 +56,15 @@ namespace EventGO
         public DateTime ClickTime { get; set; }
 
     }
+    public class Student
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
 
+        public static readonly RoutedEvent NameChangedEvent =
+            EventManager.RegisterRoutedEvent("NameChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(Student));
+
+    }
     public class TimeButton : Button
     {
         public static readonly RoutedEvent ReportTimeEvent = EventManager.RegisterRoutedEvent
@@ -50,17 +81,15 @@ namespace EventGO
             }
         }
 
+
         protected override void OnClick()
         {
             base.OnClick();
             ReportTimeEventArgs reportTimeEventArgs = new ReportTimeEventArgs(ReportTimeEvent, this) { ClickTime = DateTime.Now };
-            ReportTime += TimeButton_ReportTime;
+
             RaiseEvent(reportTimeEventArgs);
         }
+      
 
-        private void TimeButton_ReportTime(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(((ReportTimeEventArgs)e).ClickTime.ToString());
-        }
     }
 }
