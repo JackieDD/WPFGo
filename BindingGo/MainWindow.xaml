@@ -8,7 +8,7 @@
         Title="MainWindow" Height="110" Width="300">
     <Grid>
         <StackPanel>
-            <TextBox Name="textBoxName" BorderBrush="Black" Margin="5"/>
+            <TextBox Name="textBoxName" BorderBrush="Black" Margin="5" Style="{DynamicResource RoundCornerTextBoxStyle}"/>
             <Button Content="Add Age" Margin="5" Click="Button_Click"/>
         </StackPanel>
     </Grid>

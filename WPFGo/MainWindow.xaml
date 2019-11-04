@@ -15,7 +15,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Row="0" Grid.ColumnSpan="3">
-            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5" />
+            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5" Text="{Binding Value, ElementName=slider,UpdateSourceTrigger=PropertyChanged}"/>
             <!--Text="{Binding ElementName=slider,Path=Value,UpdateSourceTrigger=PropertyChanged}"-->
         </Viewbox>
 

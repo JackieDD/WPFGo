@@ -28,9 +28,9 @@ namespace WPFGo
         {
 
             InitializeComponent();
-            Binding binding = new Binding("Value") { ElementName = "slider", UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged, NotifyOnValidationError = true };
-            binding.ValidationRules.Add(new RangeValidationRule { ValidatesOnTargetUpdated = true });
-            sliderNum.SetBinding(TextBox.TextProperty, binding);
+            //Binding binding = new Binding("Value") { ElementName = "slider", UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged, NotifyOnValidationError = true };
+            //binding.ValidationRules.Add(new RangeValidationRule { ValidatesOnTargetUpdated = true });
+            //sliderNum.SetBinding(TextBox.TextProperty, binding);
             sliderNum.AddHandler(Validation.ErrorEvent, new RoutedEventHandler(ValidationError));
         
         }
