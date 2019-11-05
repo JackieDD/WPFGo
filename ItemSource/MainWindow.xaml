@@ -11,7 +11,14 @@
             <TextBlock Text="Student ID:" Margin="5" />
             <TextBox Margin="5" Name="studentId"/>
             <TextBlock Text="Student List:" Margin="5"/>
-            <ListBox Height="150" Margin="5" Name="studentList"/>
+            <ListBox Height="150" Margin="5" Name="studentList">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate >
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+               
+            </ListBox>
             <Button Margin="5" Width="50" Height="20" HorizontalAlignment="Right" Content="Add" Click="Button_Click"/>
         </StackPanel>
     </Grid>

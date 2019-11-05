@@ -4,9 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TemplateGo"
+        xmlns:c="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox Name="listBox" Margin="5"/>
-    </Grid>
+        Title="MainWindow" Height="300" Width="300">
+    <Window.Resources>
+        <DataTemplate DataType="Unit">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
+                        <Rectangle Stroke="Yellow" Fill="Orange" Width="{Binding XPath=@Price}" />
+                        <TextBlock Text="{Binding XPath=@Year}"/>
+                    </Grid>
+                    <TextBlock Text="{Binding XPath=@Price}" Margin="5,0"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <c:ArrayList x:Key="zs">
+            <local:Unit Year="2001年" Price="100"/>
+            <local:Unit Year="2002年" Price="120"/>
+            <local:Unit Year="2003年" Price="140"/>
+            <local:Unit Year="2004年" Price="160"/>
+            <local:Unit Year="2005年" Price="180"/>
+            <local:Unit Year="2006年" Price="200"/>
+        </c:ArrayList>
+
+        <XmlDataProvider x:Key="ds" XPath="Units/Unit">
+            <x:XData>
+                <Units xmlns="">
+                    <Unit Year="2001年" Price="100"/>
+                    <Unit Year="2002年" Price="120"/>
+                    <Unit Year="2003年" Price="140"/>
+                    <Unit Year="2004年" Price="160"/>
+                    <Unit Year="2005年" Price="180"/>
+                    <Unit Year="2006年" Price="200"/>
+                </Units>
+            </x:XData>
+        </XmlDataProvider>
+    </Window.Resources>
+    <StackPanel>
+        <ListBox ItemsSource="{Binding Source={StaticResource ds}}"/>
+        <ComboBox ItemsSource="{Binding Source={StaticResource ds}}" Margin="5"/>
+    </StackPanel>
 </Window>
