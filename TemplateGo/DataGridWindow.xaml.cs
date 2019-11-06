@@ -22,14 +22,39 @@ namespace TemplateGo
         public DataGridWindow()
         {
             InitializeComponent();
+         
         }
 
         private void TextBoxName_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = e.OriginalSource as TextBox;
             ContentPresenter contentPresenter = tb.TemplatedParent as ContentPresenter;
-                
+            Student stu = contentPresenter.Content as Student;
+            listViewStudent.SelectedItem = stu;
+        
+            ListViewItem lvi = listViewStudent.ItemContainerGenerator.ContainerFromItem(stu) as ListViewItem;
+            CheckBox chb = FindVisualChild<CheckBox>(lvi);
+            MessageBox.Show(chb.Name);
+          
         }
+
+        private T FindVisualChild<T>(DependencyObject obj) where T : DependencyObject
+        {
+            for(int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild(obj, i);
+                if (child != null && child is T)
+                    return child as T;
+                else
+                {
+                    T childOfChild = FindVisualChild<T>(child);
+                    if (childOfChild != null)
+                        return childOfChild;
+                }
+            }
+            return null;
+        }
+    
     }
 
     public class Student

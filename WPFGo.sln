@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceGo", "ResourceGo\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateGo", "TemplateGo\TemplateGo.csproj", "{7F3C54AA-4BED-47E9-B7C7-F06A96DCBD1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleGo", "StyleGo\StyleGo.csproj", "{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{7F3C54AA-4BED-47E9-B7C7-F06A96DCBD1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3C54AA-4BED-47E9-B7C7-F06A96DCBD1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3C54AA-4BED-47E9-B7C7-F06A96DCBD1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

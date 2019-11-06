@@ -9,24 +9,24 @@
         Title="DataGridWindow" Height="300" Width="300" Background="Orange">
     <Window.Resources>
         <c:ArrayList x:Key="stuList">
-            <local:Student ID="1" Name="赵" Skill="坑" HasJob="True"/>
-            <local:Student ID="2" Name="钱" Skill="蒙" HasJob="False"/>
-            <local:Student ID="3" Name="孙" Skill="拐" HasJob="True"/>
-            <local:Student ID="4" Name="李" Skill="骗" HasJob="False"/>
-            <local:Student ID="5" Name="周" Skill="烧" HasJob="True"/>
-            <local:Student ID="6" Name="吴" Skill="杀" HasJob="False"/>
+            <local:Student ID="1" Name="赵一" Skill="坑" HasJob="True"/>
+            <local:Student ID="2" Name="钱二" Skill="蒙" HasJob="False"/>
+            <local:Student ID="3" Name="孙三" Skill="拐" HasJob="True"/>
+            <local:Student ID="4" Name="李四" Skill="骗" HasJob="False"/>
+            <local:Student ID="5" Name="周五" Skill="烧" HasJob="True"/>
+            <local:Student ID="6" Name="吴六" Skill="杀" HasJob="False"/>
         </c:ArrayList>
         <DataTemplate x:Key="nameDT">
             <TextBox x:Name="textBoxName" Text="{Binding Name}" GotFocus="TextBoxName_GotFocus"/>
         </DataTemplate>
         <DataTemplate x:Key="skillDT">
-            <TextBox x:Name="textBoxSkill" Text="{Binding Skill}"/>
+            <TextBox x:Name="textBoxSkill" Text="{Binding Skill}" FontStyle="Oblique"/>
         </DataTemplate>
         <DataTemplate x:Key="hjDT">
             <CheckBox x:Name="checkBoxJob" IsChecked="{Binding HasJob}"/>
         </DataTemplate>
     </Window.Resources>
-    <Grid Margin="5">
+    <StackPanel Margin="5">
         <ListView Name="listViewStudent" ItemsSource="{StaticResource stuList}">
             <ListView.View>
                 <GridView>
@@ -37,5 +37,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
-    </Grid>
+        <DataGrid Height="100" x:Name="dataGrid">
+      
+        
+                
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
+                        <GridViewColumn Header="姓名" CellTemplate="{StaticResource nameDT}"/>
+                        <GridViewColumn Header="技术" CellTemplate="{StaticResource skillDT}" />
+                        <GridViewColumn Header="已工作" CellTemplate="{StaticResource hjDT}" />
+                  
+        </DataGrid>
+    </StackPanel>
+    
 </Window>
