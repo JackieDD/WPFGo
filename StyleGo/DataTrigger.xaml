@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StyleGo"
         mc:Ignorable="d"
-        Title="DataTrigger" Height="130" Width="300">
-    <Grid>
-        
-    </Grid>
+        Title="DataTrigger" Height="151.53" Width="300">
+    <Window.Resources>
+        <local:LengthConverter x:Key="lc"/>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={x:Static RelativeSource.Self},Path=Text.Length,Converter={StaticResource lc} }" Value="false">
+                    <Setter Property="FontSize" Value="20"/>
+
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBox Height="50"/>
+        <TextBox Height="50"/>
+    </StackPanel>
 </Window>

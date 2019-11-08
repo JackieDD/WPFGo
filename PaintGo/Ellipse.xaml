@@ -1,0 +1,34 @@
+﻿<Window x:Class="PaintGo.Ellipse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaintGo"
+        mc:Ignorable="d"
+        Title="Ellipse" Height="300" Width="300">
+ 
+        <Viewbox Margin="20">
+            
+      
+        <Ellipse HorizontalAlignment="Center" Height="150"  Stroke="#FF4B4848" VerticalAlignment="Center" Width="150" RenderTransformOrigin="0.38,0.347">
+            <Ellipse.Effect>
+                <DropShadowEffect ShadowDepth="7" Opacity="0.75" Direction="-4.5"/>
+            </Ellipse.Effect>
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.3,0.25" RadiusY="0.4" RadiusX="0.45" Center="0.4,0.4">
+                    <RadialGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.4" CenterX="0.4" ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0" CenterY="0.4" CenterX="0.4"/>
+                            <RotateTransform Angle="26" CenterY="0.4" CenterX="0.4"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </RadialGradientBrush.RelativeTransform>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        </Viewbox>
+
+</Window>

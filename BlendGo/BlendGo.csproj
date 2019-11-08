@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}</ProjectGuid>
+    <ProjectGuid>{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StyleGo</RootNamespace>
-    <AssemblyName>StyleGo</AssemblyName>
+    <RootNamespace>BlendGo</RootNamespace>
+    <AssemblyName>BlendGo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,14 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DataTrigger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EventTrigger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,12 +62,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DataTrigger.xaml.cs">
-      <DependentUpon>DataTrigger.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EventTrigger.xaml.cs">
-      <DependentUpon>EventTrigger.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -107,6 +93,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="03BTE_PLUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="03BTE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AcoSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="03IIC.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

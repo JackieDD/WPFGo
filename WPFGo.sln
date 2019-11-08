@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Blend for Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFGo", "WPFGo\WPFGo.csproj", "{862F3E1D-02F3-4CCA-82C3-02730B992B6F}"
@@ -22,6 +22,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateGo", "TemplateGo\TemplateGo.csproj", "{7F3C54AA-4BED-47E9-B7C7-F06A96DCBD1A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleGo", "StyleGo\StyleGo.csproj", "{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridViewGo", "GridViewGo\GridViewGo.csproj", "{5216AC5A-B5BC-4C52-B54A-1AB0BC359AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintGo", "PaintGo\PaintGo.csproj", "{A1095396-334B-4512-931A-DA0E841B8A48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlendGo", "BlendGo\BlendGo.csproj", "{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +75,18 @@ Global
 		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E4EE7D-503F-4AFE-AE82-BEB2B76F0BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5216AC5A-B5BC-4C52-B54A-1AB0BC359AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5216AC5A-B5BC-4C52-B54A-1AB0BC359AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5216AC5A-B5BC-4C52-B54A-1AB0BC359AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5216AC5A-B5BC-4C52-B54A-1AB0BC359AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1095396-334B-4512-931A-DA0E841B8A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1095396-334B-4512-931A-DA0E841B8A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1095396-334B-4512-931A-DA0E841B8A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1095396-334B-4512-931A-DA0E841B8A48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,13 @@ namespace TemplateGo
         public DataGridWindow()
         {
             InitializeComponent();
-         
+            dataGrid.ItemsSource = new ObservableCollection<Customer>
+         {
+                 new Customer { SeriesNum = "0", Problem = "1", Personnel =true } ,
+                 new Customer { SeriesNum = "00", Problem = "11", Personnel = false }
+         };
+
+    
         }
 
         private void TextBoxName_GotFocus(object sender, RoutedEventArgs e)
@@ -35,7 +42,7 @@ namespace TemplateGo
             ListViewItem lvi = listViewStudent.ItemContainerGenerator.ContainerFromItem(stu) as ListViewItem;
             CheckBox chb = FindVisualChild<CheckBox>(lvi);
             MessageBox.Show(chb.Name);
-          
+            
         }
 
         private T FindVisualChild<T>(DependencyObject obj) where T : DependencyObject
@@ -56,7 +63,15 @@ namespace TemplateGo
         }
     
     }
+    public class Customer
+    {
+        public string SeriesNum { get; set; }
 
+        public string Problem { get; set; }
+
+        public bool Personnel { get; set; }
+
+    }
     public class Student
     {
         public int ID { get; set; }

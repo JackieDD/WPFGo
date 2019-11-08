@@ -37,16 +37,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <DataGrid Height="100" x:Name="dataGrid">
-      
-        
-                
-                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
-                        <GridViewColumn Header="姓名" CellTemplate="{StaticResource nameDT}"/>
-                        <GridViewColumn Header="技术" CellTemplate="{StaticResource skillDT}" />
-                        <GridViewColumn Header="已工作" CellTemplate="{StaticResource hjDT}" />
-                  
+        <DataGrid Height="100" x:Name="dataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="SeriesNum" Binding="{Binding SeriesNum}"/>
+                <DataGridTextColumn Header="Problem" Binding="{Binding Problem}"/>
+                <DataGridTextColumn Header="Personnel" Binding="{Binding Personnel}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </StackPanel>
-    
+
 </Window>
