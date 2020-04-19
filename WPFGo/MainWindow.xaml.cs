@@ -28,6 +28,8 @@ namespace WPFGo
         {
 
             InitializeComponent();
+
+            MessageBox.Show(Resources["a"].ToString());
             //Binding binding = new Binding("Value") { ElementName = "slider", UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged, NotifyOnValidationError = true };
             //binding.ValidationRules.Add(new RangeValidationRule { ValidatesOnTargetUpdated = true });
             //sliderNum.SetBinding(TextBox.TextProperty, binding);

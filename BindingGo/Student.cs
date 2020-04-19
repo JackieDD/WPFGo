@@ -11,8 +11,11 @@ namespace BindingGo
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private string name;
+        private List<Student> students; 
         public string Name
         {
+            
+
             get { return name; }
 
             set
@@ -20,6 +23,16 @@ namespace BindingGo
                 name = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
 
+            }
+        }
+
+        public List<Student> Students
+        {
+            get { return students; }
+            set
+            {
+                students = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Students)));
             }
         }
 

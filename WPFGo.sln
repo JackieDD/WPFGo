@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio Version 16
+# Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFGo", "WPFGo\WPFGo.csproj", "{862F3E1D-02F3-4CCA-82C3-02730B992B6F}"
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintGo", "PaintGo\PaintGo.csproj", "{A1095396-334B-4512-931A-DA0E841B8A48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlendGo", "BlendGo\BlendGo.csproj", "{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest", "MyTest\MyTest.csproj", "{6835B05F-75F8-4531-9641-FCD4EA485780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D703ACBF-0B4D-4337-8A09-BD2158DA69F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6835B05F-75F8-4531-9641-FCD4EA485780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6835B05F-75F8-4531-9641-FCD4EA485780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6835B05F-75F8-4531-9641-FCD4EA485780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6835B05F-75F8-4531-9641-FCD4EA485780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +42,8 @@ namespace ItemSource
             studentList.DisplayMemberPath = "Name";
             Binding binding = new Binding { Path = new PropertyPath("SelectedItem.ID"), Source = studentList };
             studentId.SetBinding(TextBox.TextProperty, binding);
-
+            //new ListBox().ItemsSource = new DataTable().DefaultView;
+            
             
         }
 

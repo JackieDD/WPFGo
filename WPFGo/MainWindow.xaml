@@ -3,25 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:WPFGo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="110" Width="240">
+        Title="MainWindow" Height="200" Width="240" x:ClassModifier="public">
+
+    <Window.Resources>
+        <Style x:Key="{x:Type Button}" TargetType="Button" > <!--targetType用于提示setter属性-->
+            <Setter Property="Height" Value="50"/>
+        </Style>
+        <Style x:Key="btn" TargetType="Button" >
+            <!--targetType用于提示setter属性-->
+            <Setter Property="Height" Value="100"/>
+        </Style>
+        <sys:String x:Key="a">fd</sys:String>
+    </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Viewbox Grid.Row="0" Grid.ColumnSpan="3">
-            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5" Text="{Binding Value, ElementName=slider,UpdateSourceTrigger=PropertyChanged}"/>
-            <!--Text="{Binding ElementName=slider,Path=Value,UpdateSourceTrigger=PropertyChanged}"-->
-        </Viewbox>
-
-        <Viewbox Grid.Row="1" HorizontalAlignment="Left"  Grid.ColumnSpan="3">
-            <Slider Width="240"  Name="slider" Margin="5"  Minimum="-10" Maximum="110"/>
-        </Viewbox>
-
+        <StackPanel>
+            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5" Text="{Binding Value, ElementName=slider,UpdateSourceTrigger=PropertyChanged}" />
+            <Slider   Name="slider" Margin="5"  Minimum="-10" Maximum="110" />
+            <Button Content="老兰"/>
+            <Button Content="老兰" Style="{StaticResource btn}"/>
+        </StackPanel>
     </Grid>
 </Window>

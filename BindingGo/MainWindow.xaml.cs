@@ -20,24 +20,25 @@ namespace BindingGo
     /// </summary>
     public partial class MainWindow : Window
     {
-        Student stu;
+        readonly List<Student> studentList;
         public MainWindow()
         {
-
+            DataContext = "磊哥大黑狗";
             InitializeComponent();
-            stu = new Student();
-            Binding binding = new Binding(nameof(stu.Name))
+            studentList = new List<Student> { new Student { Students=new List<Student> { new Student()} } };
+            Binding binding = new Binding("/Students/Name") // /表示默认元素 后面紧接属性
             {
-                Source = stu,
+                Source = studentList,
+                Mode=BindingMode.OneWay
                // Path = new PropertyPath(nameof(stu.Name)),              
             };
-            //BindingOperations.SetBinding(textBoxName, TextBox.TextProperty, binding);
-            textBoxName.SetBinding(TextBox.TextProperty, binding);
+            BindingOperations.SetBinding(textBoxName, TextBox.TextProperty, binding);
+            //textBoxName.SetBinding(TextBox.TextProperty, binding);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            stu.Name += "Name";
+            studentList[0].Students[0].Name += textBoxName.DataContext.ToString();
         }
     }
 }
