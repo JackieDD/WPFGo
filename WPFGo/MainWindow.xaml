@@ -20,7 +20,7 @@
     </Window.Resources>
     <Grid>
         <StackPanel>
-            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5" Text="{Binding Value, ElementName=slider,UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox BorderThickness="0" VerticalAlignment="Center"  x:Name="sliderNum" x:FieldModifier="public"  Margin="5"  />
             <Slider   Name="slider" Margin="5"  Minimum="-10" Maximum="110" />
             <Button Content="老兰"/>
             <Button Content="老兰" Style="{StaticResource btn}"/>

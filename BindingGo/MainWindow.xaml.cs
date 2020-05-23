@@ -34,6 +34,8 @@ namespace BindingGo
             };
             BindingOperations.SetBinding(textBoxName, TextBox.TextProperty, binding);
             //textBoxName.SetBinding(TextBox.TextProperty, binding);
+
+           // RelativeSource relativeSource = new RelativeSource(RelativeSourceMode.FindAncestor);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

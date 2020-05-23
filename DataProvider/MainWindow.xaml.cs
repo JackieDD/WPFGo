@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace DataProvider
     {
         public MainWindow()
         {
+            Trace.WriteLine("111");
             InitializeComponent();
             ObjectDataProvider objectDataProvider = new ObjectDataProvider
             {
@@ -46,6 +48,7 @@ namespace DataProvider
             objectDataProvider.MethodParameters.Add("1");
             objectDataProvider.MethodParameters.Add("2");
             MessageBox.Show(objectDataProvider.Data.ToString());
+            Dictionary<string,string> keyValuePairs= new Dictionary<string, string> { [""]=""};
         }
     }
 
